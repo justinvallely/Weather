@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Z3G-Lm-WX5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JA6-WO-E1r">
+                                <rect key="frame" x="38" y="28" width="244" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Pys-U6-wg2"/>
+                                    <constraint firstAttribute="width" constant="244" id="Ydi-6T-vio"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqt-kx-dPf">
+                                <rect key="frame" x="105" y="80" width="111" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ijU-ug-yMR"/>
+                                    <constraint firstAttribute="width" constant="111" id="nR3-2n-KVD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3c3-Mb-3Ne">
+                                <rect key="frame" x="16" y="109" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13U-j6-58m">
+                                <rect key="frame" x="92" y="147" width="137" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="QPA-CW-QJh"/>
+                                    <constraint firstAttribute="height" constant="30" id="fhC-xq-szJ"/>
+                                </constraints>
+                                <state key="normal" title="Get Weather Report">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findWeather:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hWc-dp-YOY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2Z-YO-gs1">
+                                <rect key="frame" x="16" y="185" width="288" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="Vbm-ub-h77"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.61130839646464641" green="0.0" blue="0.11044616240789619" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3c3-Mb-3Ne" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="27X-pu-GZP"/>
+                            <constraint firstItem="3c3-Mb-3Ne" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="6wq-b2-wX2"/>
+                            <constraint firstAttribute="centerX" secondItem="Dqt-kx-dPf" secondAttribute="centerX" id="7r5-AC-jgT"/>
+                            <constraint firstItem="Dqt-kx-dPf" firstAttribute="top" secondItem="JA6-WO-E1r" secondAttribute="bottom" constant="31" id="Diq-ha-wfY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z3G-Lm-WX5" secondAttribute="trailing" constant="-16" id="JyO-EJ-Pqi"/>
+                            <constraint firstItem="u2Z-YO-gs1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="MOt-VX-lgb"/>
+                            <constraint firstItem="13U-j6-58m" firstAttribute="top" secondItem="3c3-Mb-3Ne" secondAttribute="bottom" constant="8" id="Qva-ig-N3v"/>
+                            <constraint firstItem="u2Z-YO-gs1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="T0B-NP-svz"/>
+                            <constraint firstAttribute="centerX" secondItem="JA6-WO-E1r" secondAttribute="centerX" id="Usq-qq-IoO"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Z3G-Lm-WX5" secondAttribute="bottom" id="giB-ki-XSJ"/>
+                            <constraint firstItem="Z3G-Lm-WX5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="kYx-2h-4AS"/>
+                            <constraint firstItem="u2Z-YO-gs1" firstAttribute="top" secondItem="13U-j6-58m" secondAttribute="bottom" constant="8" id="ndd-0t-odp"/>
+                            <constraint firstItem="JA6-WO-E1r" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="pVQ-cU-1sh"/>
+                            <constraint firstItem="3c3-Mb-3Ne" firstAttribute="top" secondItem="Dqt-kx-dPf" secondAttribute="bottom" constant="8" id="uE9-V1-di1"/>
+                            <constraint firstAttribute="centerX" secondItem="13U-j6-58m" secondAttribute="centerX" id="wTI-CG-3hq"/>
+                            <constraint firstItem="Z3G-Lm-WX5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="znn-zQ-Y55"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="u2Z-YO-gs1" id="2Uq-S0-Dsu"/>
+                        <outlet property="userCity" destination="3c3-Mb-3Ne" id="LyE-Uh-No6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.jpg" width="640" height="1136"/>
+    </resources>
+</document>
